@@ -13,6 +13,11 @@
 		BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA21343728505B3F00E3D332 /* NewsBee.xcdatamodeld */; };
 		BA21343B28505B4000E3D332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA21343A28505B4000E3D332 /* Assets.xcassets */; };
 		BA21343E28505B4000E3D332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */; };
+		BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */; };
+		BADCD7A4285076C2009E0CD0 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */; };
+		BADCD7A628507706009E0CD0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A528507706009E0CD0 /* SearchViewController.swift */; };
+		BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A728507745009E0CD0 /* SettingsViewController.swift */; };
+		BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A928507799009E0CD0 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		BA21343D28505B4000E3D332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA21343F28505B4000E3D332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA21344528505E1A00E3D332 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
+		BADCD7A528507706009E0CD0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BADCD7A728507745009E0CD0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BADCD7A928507799009E0CD0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +82,22 @@
 		BADCD79F285075D1009E0CD0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
+				BADCD7A028507688009E0CD0 /* ViewControllers */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		BADCD7A028507688009E0CD0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */,
+				BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */,
+				BADCD7A528507706009E0CD0 /* SearchViewController.swift */,
+				BADCD7A928507799009E0CD0 /* AlertViewController.swift */,
+				BADCD7A728507745009E0CD0 /* SettingsViewController.swift */,
+				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA21343328505B3F00E3D332 /* MainTabBarViewController.swift in Sources */,
+				BADCD7A628507706009E0CD0 /* SearchViewController.swift in Sources */,
 				BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */,
 				BA21342F28505B3F00E3D332 /* AppDelegate.swift in Sources */,
+				BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */,
+				BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */,
+				BADCD7A4285076C2009E0CD0 /* PopularViewController.swift in Sources */,
 				BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */,
+				BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
