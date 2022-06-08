@@ -11,7 +11,7 @@ class MainTabBarViewController: UITabBarController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemPink
+    view.backgroundColor = .black
     
     
     let vc1 = UINavigationController(rootViewController: HomeViewController())
@@ -33,7 +33,9 @@ class MainTabBarViewController: UITabBarController {
     vc4.title = "알림"
     vc5.title = "설정"
     
-    tabBar.tintColor = .label
+    tabBar.tintColor = .white
+    tabBar.barTintColor = .white
+    tabBar.isTranslucent = false
     
     setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
     
