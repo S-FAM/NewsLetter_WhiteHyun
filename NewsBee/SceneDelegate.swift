@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.windowScene = windowScene
     
     // 4. rootviewController 설정
-    let vc = ViewController()
+    let vc = MainTabBarViewController()
     window?.rootViewController = vc
     
     // 5. 설정한 window를 띄워줌

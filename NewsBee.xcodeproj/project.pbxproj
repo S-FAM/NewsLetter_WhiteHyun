@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA21342F28505B3F00E3D332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21342E28505B3F00E3D332 /* AppDelegate.swift */; };
 		BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21343028505B3F00E3D332 /* SceneDelegate.swift */; };
-		BA21343328505B3F00E3D332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21343228505B3F00E3D332 /* ViewController.swift */; };
+		BA21343328505B3F00E3D332 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */; };
 		BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA21343728505B3F00E3D332 /* NewsBee.xcdatamodeld */; };
 		BA21343B28505B4000E3D332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA21343A28505B4000E3D332 /* Assets.xcassets */; };
 		BA21343E28505B4000E3D332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		BA21342B28505B3F00E3D332 /* NewsBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA21342E28505B3F00E3D332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA21343028505B3F00E3D332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA21343228505B3F00E3D332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BA21343828505B3F00E3D332 /* NewsBee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsBee.xcdatamodel; sourceTree = "<group>"; };
 		BA21343A28505B4000E3D332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA21343D28505B4000E3D332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,13 +60,21 @@
 			children = (
 				BA21342E28505B3F00E3D332 /* AppDelegate.swift */,
 				BA21343028505B3F00E3D332 /* SceneDelegate.swift */,
-				BA21343228505B3F00E3D332 /* ViewController.swift */,
+				BADCD79F285075D1009E0CD0 /* Source */,
 				BA21343A28505B4000E3D332 /* Assets.xcassets */,
 				BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */,
 				BA21343F28505B4000E3D332 /* Info.plist */,
 				BA21343728505B3F00E3D332 /* NewsBee.xcdatamodeld */,
 			);
 			path = NewsBee;
+			sourceTree = "<group>";
+		};
+		BADCD79F285075D1009E0CD0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +93,8 @@
 			dependencies = (
 			);
 			name = NewsBee;
+			packageProductDependencies = (
+			);
 			productName = NewsBee;
 			productReference = BA21342B28505B3F00E3D332 /* NewsBee.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +123,8 @@
 				Base,
 			);
 			mainGroup = BA21342228505B3F00E3D332;
+			packageReferences = (
+			);
 			productRefGroup = BA21342C28505B3F00E3D332 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA21343328505B3F00E3D332 /* ViewController.swift in Sources */,
+				BA21343328505B3F00E3D332 /* MainTabBarViewController.swift in Sources */,
 				BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */,
 				BA21342F28505B3F00E3D332 /* AppDelegate.swift in Sources */,
 				BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */,
