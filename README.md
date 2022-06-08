@@ -1,5 +1,5 @@
 # NewsBee
-신뢰할 수 있는 기사를 정리하여 보여주는 뉴스 앱, NewBee, swiftlint 사용해보자!
+신뢰할 수 있는 기사를 정리하여 보여주는 뉴스 앱, NewBee
 
 
 ## Commit convention
