@@ -14,6 +14,7 @@
 		BA21343B28505B4000E3D332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA21343A28505B4000E3D332 /* Assets.xcassets */; };
 		BA21343E28505B4000E3D332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */; };
 		BA92985328536E4400DD9364 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92985228536E4400DD9364 /* NewsViewController.swift */; };
+		BA929855285388A800DD9364 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */; };
 		BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */; };
 		BADCD7A4285076C2009E0CD0 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */; };
 		BADCD7A628507706009E0CD0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A528507706009E0CD0 /* SearchViewController.swift */; };
@@ -32,6 +33,7 @@
 		BA21343F28505B4000E3D332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA21344528505E1A00E3D332 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA92985228536E4400DD9364 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		BADCD7A528507706009E0CD0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */,
 				BA92985228536E4400DD9364 /* NewsViewController.swift */,
+				BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */,
 				BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */,
 				BADCD7A528507706009E0CD0 /* SearchViewController.swift */,
 				BADCD7A928507799009E0CD0 /* AlertViewController.swift */,
@@ -185,6 +188,7 @@
 				BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */,
 				BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */,
 				BADCD7A4285076C2009E0CD0 /* PopularViewController.swift in Sources */,
+				BA929855285388A800DD9364 /* CategoryCollectionViewCell.swift in Sources */,
 				BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */,
 				BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */,
 			);
