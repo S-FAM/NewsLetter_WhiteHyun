@@ -115,7 +115,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
       sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
     let size = CGSize(width: categories[indexPath.item].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]).width + 25, height: 20)
-    print(size)
     return size
   }
 }
