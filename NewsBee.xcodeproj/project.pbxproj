@@ -72,11 +72,10 @@
 		BA21342D28505B3F00E3D332 /* NewsBee */ = {
 			isa = PBXGroup;
 			children = (
+				BAE77C4B2854734B007330B0 /* Resource */,
 				BA21342E28505B3F00E3D332 /* AppDelegate.swift */,
 				BA21343028505B3F00E3D332 /* SceneDelegate.swift */,
 				BADCD79F285075D1009E0CD0 /* Source */,
-				BA21343A28505B4000E3D332 /* Assets.xcassets */,
-				BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */,
 				BA21343F28505B4000E3D332 /* Info.plist */,
 				BA21343728505B3F00E3D332 /* NewsBee.xcdatamodeld */,
 			);
@@ -104,6 +103,39 @@
 				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BAE77C4B2854734B007330B0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BAE77C4E28547389007330B0 /* Network */,
+				BAE77C4D28547376007330B0 /* Assets */,
+				BAE77C4C2854735B007330B0 /* Storyboards */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BAE77C4C2854735B007330B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA21343C28505B4000E3D332 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BAE77C4D28547376007330B0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BA21343A28505B4000E3D332 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BAE77C4E28547389007330B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
