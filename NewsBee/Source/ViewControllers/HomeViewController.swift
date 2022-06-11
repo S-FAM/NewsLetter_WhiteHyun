@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
   
   
+  let categories: [String] = ["business", "entertainment", "health", "science", "sports", "technology"]
+  
   /// 상단에 보이는 뉴스비 아이콘 이미지입니다.
   private let iconImageView: UIImageView = {
     let image = UIImage(named: "mainIcon")
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.showsHorizontalScrollIndicator = false // 스크롤 인디케이터 제거
     collectionView.dataSource = self
+    collectionView.delegate = self
     collectionView.register(
       CategoryCollectionViewCell.self,
       forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier
@@ -79,13 +82,13 @@ class HomeViewController: UIViewController {
   }
 }
 
+
 // MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    //FIXME: 서브카테고리가 구성되면 배열에 맞춰 값 할당해주어야 함
-    return 10
+    return categories.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -97,9 +100,25 @@ extension HomeViewController: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
     
-    //FIXME: 리터럴이 아닌 서브카테고리 배열에서 indexPath.row를 index로 하여 가져오도록 수정해야함
-    cell.configure(with: "테크")
+    cell.configure(with: categories[indexPath.row])
     
     return cell
+  }
+}
+
+
+// MARK: - UICollectionViewDelegate
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+  
+  // 셀의 item별 크기 설정
+  func collectionView(
+      _ collectionView: UICollectionView,
+      layout collectionViewLayout: UICollectionViewLayout,
+      sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    let size = CGSize(width: categories[indexPath.item].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]).width + 25, height: 20)
+    print(size)
+    return size
   }
 }
