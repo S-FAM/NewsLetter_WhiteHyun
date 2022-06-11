@@ -24,9 +24,6 @@ class HomeViewController: UIViewController {
   /// 서브카테고리를 보여주는 컬렉션뷰입니다.
   private lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
-    
-    //FIXME: 정적 Size로 설정했지만, 글씨 크기에 맞추어 동적으로 보여주어야 함
-    layout.itemSize = CGSize(width: 30, height: 18) // 정적 size 설정
     layout.minimumLineSpacing = 20                  // item마다 20의 공간을 둚
     layout.scrollDirection = .horizontal            // 수평 스크롤
     
