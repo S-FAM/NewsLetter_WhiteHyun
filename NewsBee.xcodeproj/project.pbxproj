@@ -20,6 +20,7 @@
 		BADCD7A628507706009E0CD0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A528507706009E0CD0 /* SearchViewController.swift */; };
 		BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A728507745009E0CD0 /* SettingsViewController.swift */; };
 		BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A928507799009E0CD0 /* AlertViewController.swift */; };
+		BAE77C50285474E9007330B0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE77C4F285474E9007330B0 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BADCD7A528507706009E0CD0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BADCD7A728507745009E0CD0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BADCD7A928507799009E0CD0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		BAE77C4F285474E9007330B0 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		BAE77C4E28547389007330B0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BAE77C4F285474E9007330B0 /* APIConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */,
 				BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */,
 				BADCD7A4285076C2009E0CD0 /* PopularViewController.swift in Sources */,
+				BAE77C50285474E9007330B0 /* APIConstants.swift in Sources */,
 				BA929855285388A800DD9364 /* CategoryCollectionViewCell.swift in Sources */,
 				BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */,
 				BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */,
