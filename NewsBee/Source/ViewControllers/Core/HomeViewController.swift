@@ -139,7 +139,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
   
   // 셀의 item별 크기 설정
   func collectionView(
