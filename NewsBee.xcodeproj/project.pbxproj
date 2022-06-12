@@ -54,6 +54,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0CF7B72855D8A40099BE9F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				BA92985228536E4400DD9364 /* NewsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		BA0CF7B82855D91A0099BE9F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */,
+				BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */,
+				BADCD7A528507706009E0CD0 /* SearchViewController.swift */,
+				BADCD7A928507799009E0CD0 /* AlertViewController.swift */,
+				BADCD7A728507745009E0CD0 /* SettingsViewController.swift */,
+				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BA0CF7B92855D9370099BE9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA21342228505B3F00E3D332 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +116,7 @@
 		BADCD79F285075D1009E0CD0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BA0CF7B92855D9370099BE9F /* Views */,
 				BADCD7A028507688009E0CD0 /* ViewControllers */,
 			);
 			path = Source;
@@ -95,14 +125,8 @@
 		BADCD7A028507688009E0CD0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BADCD7A1285076BA009E0CD0 /* HomeViewController.swift */,
-				BA92985228536E4400DD9364 /* NewsViewController.swift */,
-				BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */,
-				BADCD7A3285076C2009E0CD0 /* PopularViewController.swift */,
-				BADCD7A528507706009E0CD0 /* SearchViewController.swift */,
-				BADCD7A928507799009E0CD0 /* AlertViewController.swift */,
-				BADCD7A728507745009E0CD0 /* SettingsViewController.swift */,
-				BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */,
+				BA0CF7B72855D8A40099BE9F /* General */,
+				BA0CF7B82855D91A0099BE9F /* Core */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

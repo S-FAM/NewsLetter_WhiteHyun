@@ -110,9 +110,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
   
   // 셀의 item별 크기 설정
   func collectionView(
-      _ collectionView: UICollectionView,
-      layout collectionViewLayout: UICollectionViewLayout,
-      sizeForItemAt indexPath: IndexPath
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
     let size = CGSize(width: categories[indexPath.item].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]).width + 25, height: 20)
     return size
