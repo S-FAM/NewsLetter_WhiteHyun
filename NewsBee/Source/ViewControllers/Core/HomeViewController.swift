@@ -39,6 +39,28 @@ class HomeViewController: UIViewController {
     return collectionView
   }()
   
+  /// 서브카테고리에 따른 뉴스 뷰 컨트롤러의 컨테이너 역할을 담당합니다.
+  private lazy var pageViewController: UIPageViewController = {
+    let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    pageVC.setViewControllers([dataViewControllers[0]], direction: .forward, animated: true)
+    pageVC.delegate = self
+    pageVC.dataSource = self
+    pageVC.view.translatesAutoresizingMaskIntoConstraints = false
+    return pageVC
+  }()
+  
+  /// 카테고리별 뉴스 뷰 컨트롤러를 갖고 있습니다.
+  private lazy var dataViewControllers: [UIViewController] = {
+    var vcs: [NewsViewController] = []
+    categories.forEach {
+      let vc = NewsViewController()
+      vc.label.text = $0
+      vc.view.backgroundColor = .green
+      vcs.append(vc)
+    }
+    return vcs
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
@@ -52,6 +74,7 @@ class HomeViewController: UIViewController {
   private func setupLayouts() {
     view.addSubview(iconImageView)
     view.addSubview(collectionView)
+    view.addSubview(pageViewController.view)
   }
   
   /// 추가한 View의 제약조건을 설정합니다.
@@ -74,6 +97,16 @@ class HomeViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         collectionView.heightAnchor.constraint(equalToConstant: 20)
+      ]
+    )
+    
+    // MARK: PageViewController
+    NSLayoutConstraint.activate(
+      [
+        pageViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        pageViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        pageViewController.view.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+        pageViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ]
     )
   }
@@ -117,4 +150,51 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
     let size = CGSize(width: categories[indexPath.item].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]).width + 25, height: 20)
     return size
   }
+}
+
+
+// MARK: - UIPageViewControllerDataSource
+
+extension HomeViewController: UIPageViewControllerDataSource {
+  
+  // 페이지를 왼쪽으로 넘기는 경우 어떤 view controller를 보여줄 것인가?
+  func pageViewController(
+    _ pageViewController: UIPageViewController,
+    viewControllerBefore viewController: UIViewController
+  ) -> UIViewController? {
+    guard let index = dataViewControllers.firstIndex(of: viewController),
+          index - 1 >= 0
+    else {
+      return nil
+    }
+    return dataViewControllers[index - 1]
+  }
+  
+  // 페이지를 오른쪽으로 넘기는 경우 어떤 view controller를 보여줄 것인가?
+  func pageViewController(
+    _ pageViewController: UIPageViewController,
+    viewControllerAfter viewController: UIViewController
+  ) -> UIViewController? {
+    guard let index = dataViewControllers.firstIndex(of: viewController),
+          index + 1 < dataViewControllers.count
+    else {
+      return nil
+    }
+    return dataViewControllers[index + 1]
+  }
+}
+
+
+// MARK: - UIPageViewControllerDelegate
+
+extension HomeViewController: UIPageViewControllerDelegate {
+  
+  // 페이지가 넘어간 이후 불려지는 메소드입니다.
+  func pageViewController(
+    _ pageViewController: UIPageViewController,
+    didFinishAnimating finished: Bool,
+    previousViewControllers: [UIViewController],
+    transitionCompleted completed: Bool) {
+      print(#function)
+    }
 }
