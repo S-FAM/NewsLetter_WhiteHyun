@@ -9,21 +9,55 @@ import UIKit
 
 class NewsViewController: UIViewController {
   
-  let label = UILabel()
+  
+  private lazy var newsTableView: UITableView = {
+    let tableView = UITableView(frame: .zero, style: .plain)
+    tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.dataSource = self
+    return tableView
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    view.addSubview(label)
-    label.translatesAutoresizingMaskIntoConstraints = false
-    
+    setupLayouts()
+    setupConstraints()
+  }
+  
+  private func setupLayouts() {
+    view.addSubview(newsTableView)
+  }
+  
+  private func setupConstraints() {
     NSLayoutConstraint.activate(
       [
-        label.widthAnchor.constraint(equalToConstant: 50),
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        newsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        newsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        newsTableView.topAnchor.constraint(equalTo: view.topAnchor),
+        newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ]
     )
   }
+}
+
+extension NewsViewController: UITableViewDataSource {
   
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //FIXME: 가져온 뉴스의 개수로 설정해야함
+    return 10
+  }
   
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: NewsTableViewCell.identifier,
+      for: indexPath
+    ) as? NewsTableViewCell
+    else {
+      return UITableViewCell()
+    }
+    
+    //FIXME: 테스트코드, 수정해야함
+    cell.textLabel?.text = "Hello, World!"
+    return cell
+  }
 }

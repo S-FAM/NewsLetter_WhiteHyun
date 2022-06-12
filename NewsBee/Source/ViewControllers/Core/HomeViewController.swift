@@ -60,10 +60,8 @@ class HomeViewController: UIViewController {
   /// 카테고리별 뉴스 뷰 컨트롤러를 갖고 있습니다.
   private lazy var dataViewControllers: [UIViewController] = {
     var vcs: [NewsViewController] = []
-    categories.forEach {
+    categories.forEach { _ in
       let vc = NewsViewController()
-      vc.label.text = $0
-      vc.view.backgroundColor = .green
       vcs.append(vc)
     }
     return vcs

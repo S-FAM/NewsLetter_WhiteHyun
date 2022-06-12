@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0BA8122855E174008DF038 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0BA8112855E174008DF038 /* NewsTableViewCell.swift */; };
 		BA21342F28505B3F00E3D332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21342E28505B3F00E3D332 /* AppDelegate.swift */; };
 		BA21343128505B3F00E3D332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21343028505B3F00E3D332 /* SceneDelegate.swift */; };
 		BA21343328505B3F00E3D332 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21343228505B3F00E3D332 /* MainTabBarViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA0BA8112855E174008DF038 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		BA21342B28505B3F00E3D332 /* NewsBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA21342E28505B3F00E3D332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA21343028505B3F00E3D332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BA929854285388A800DD9364 /* CategoryCollectionViewCell.swift */,
+				BA0BA8112855E174008DF038 /* NewsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				BADCD7A628507706009E0CD0 /* SearchViewController.swift in Sources */,
 				BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */,
 				BA92985328536E4400DD9364 /* NewsViewController.swift in Sources */,
+				BA0BA8122855E174008DF038 /* NewsTableViewCell.swift in Sources */,
 				BA21342F28505B3F00E3D332 /* AppDelegate.swift in Sources */,
 				BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */,
 				BADCD7A2285076BA009E0CD0 /* HomeViewController.swift in Sources */,
