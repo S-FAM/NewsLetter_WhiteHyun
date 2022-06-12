@@ -39,6 +39,14 @@ class HomeViewController: UIViewController {
     return collectionView
   }()
   
+  private let dividingLine: UIView = {
+    let stroke = UIView()
+    stroke.layer.borderWidth = 1
+    stroke.layer.borderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1).cgColor
+    stroke.translatesAutoresizingMaskIntoConstraints = false
+    return stroke
+  }()
+  
   /// 서브카테고리에 따른 뉴스 뷰 컨트롤러의 컨테이너 역할을 담당합니다.
   private lazy var pageViewController: UIPageViewController = {
     let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -74,6 +82,7 @@ class HomeViewController: UIViewController {
   private func setupLayouts() {
     view.addSubview(iconImageView)
     view.addSubview(collectionView)
+    view.addSubview(dividingLine)
     view.addSubview(pageViewController.view)
   }
   
@@ -100,12 +109,23 @@ class HomeViewController: UIViewController {
       ]
     )
     
+    // MARK: - Dividing lines
+    NSLayoutConstraint.activate(
+      [
+        dividingLine.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        dividingLine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+        dividingLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+        dividingLine.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 15),
+        dividingLine.heightAnchor.constraint(equalToConstant: 1)
+      ]
+    )
+    
     // MARK: PageViewController
     NSLayoutConstraint.activate(
       [
         pageViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         pageViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        pageViewController.view.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+        pageViewController.view.topAnchor.constraint(equalTo: dividingLine.bottomAnchor, constant: 15),
         pageViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ]
     )
