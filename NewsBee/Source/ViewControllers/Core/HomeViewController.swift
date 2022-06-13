@@ -112,7 +112,7 @@ class HomeViewController: UIViewController {
       [
         dividingLine.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         dividingLine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        dividingLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+        dividingLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         dividingLine.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 15),
         dividingLine.heightAnchor.constraint(equalToConstant: 1)
       ]
