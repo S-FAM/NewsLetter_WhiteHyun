@@ -15,6 +15,7 @@ class NewsViewController: UIViewController {
     tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
     tableView.translatesAutoresizingMaskIntoConstraints = false
     tableView.dataSource = self
+    tableView.delegate = self
     return tableView
   }()
   
@@ -40,6 +41,8 @@ class NewsViewController: UIViewController {
   }
 }
 
+// MARK: - UITableViewDataSource
+
 extension NewsViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,5 +62,14 @@ extension NewsViewController: UITableViewDataSource {
     //FIXME: 테스트코드, 수정해야함
     cell.textLabel?.text = "Hello, World!"
     return cell
+  }
+}
+
+// MARK: - UITableViewDelegate
+
+extension NewsViewController: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 107
   }
 }
