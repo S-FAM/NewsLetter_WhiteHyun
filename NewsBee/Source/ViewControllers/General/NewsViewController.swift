@@ -31,8 +31,8 @@ class NewsViewController: UIViewController {
   private func setupConstraints() {
     NSLayoutConstraint.activate(
       [
-        newsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-        newsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        newsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+        newsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         newsTableView.topAnchor.constraint(equalTo: view.topAnchor),
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ]
