@@ -19,10 +19,15 @@ class NewsViewController: UIViewController {
     return tableView
   }()
   
+  private var headerView: NewsHeaderView?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupLayouts()
     setupConstraints()
+    
+    headerView = NewsHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 371))
+    newsTableView.tableHeaderView = headerView
   }
   
   private func setupLayouts() {
