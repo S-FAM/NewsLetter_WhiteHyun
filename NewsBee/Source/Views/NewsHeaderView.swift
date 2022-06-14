@@ -14,6 +14,7 @@ class NewsHeaderView: UIView {
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
     imageView.image = UIImage(named: "mainIcon")
+    imageView.layer.cornerRadius = 15
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
@@ -78,6 +79,6 @@ class NewsHeaderView: UIView {
       [
         newsImageView.heightAnchor.constraint(equalToConstant: 227)
       ]
-    )    
+    )
   }
 }
