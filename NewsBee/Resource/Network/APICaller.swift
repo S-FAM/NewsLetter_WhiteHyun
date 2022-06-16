@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// 네이버 뉴
+/// 네이버 뉴스 API를 가져올 때 사용합니다.
 struct APICaller {
   
   /// 뉴스를 가져옵니다.
@@ -36,8 +36,7 @@ struct APICaller {
       
       do {
         let responseNews = try JSONDecoder().decode(ResponseNews.self, from: data)
-        print(responseNews)
-        
+        completion(.success(responseNews))
       } catch {
         completion(.failure(.decodingError)) // catch 문에 따른 디코딩 에러
       }
