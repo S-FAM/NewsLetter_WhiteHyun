@@ -19,6 +19,8 @@ class NewsViewController: UIViewController {
     return tableView
   }()
   
+  private var viewModel = NewsListViewModel()
+  
   private var headerView: NewsHeaderView?
   
   override func viewDidLoad() {
@@ -28,6 +30,14 @@ class NewsViewController: UIViewController {
     
     headerView = NewsHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 371))
     newsTableView.tableHeaderView = headerView
+    
+    viewModel.news.bind { [weak self] _ in
+      DispatchQueue.main.async {
+        self?.newsTableView.reloadData()
+      }
+    }
+    
+    
   }
   
   private func setupLayouts() {
@@ -51,8 +61,7 @@ class NewsViewController: UIViewController {
 extension NewsViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //FIXME: 가져온 뉴스의 개수로 설정해야함
-    return 10
+    return viewModel.news.value.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,8 +73,8 @@ extension NewsViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     
-    //FIXME: 테스트코드, 수정해야함
-    cell.textLabel?.text = "Hello, World!"
+    cell.configure(with: viewModel.news.value[indexPath.row])
+    
     return cell
   }
 }
