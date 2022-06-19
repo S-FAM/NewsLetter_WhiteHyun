@@ -37,7 +37,7 @@ class NewsViewController: UIViewController {
       }
     }
     
-    
+    fetchData()
   }
   
   private func setupLayouts() {
@@ -53,6 +53,23 @@ class NewsViewController: UIViewController {
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ]
     )
+  }
+  
+  private func fetchData() {
+    
+    APICaller().getNaverNews(header: APINewsURI(query: "IT", display: 20, start: 1)) { results in
+      
+      switch results {
+      case .failure(let error):
+        print(error.localizedDescription)
+        
+      case .success(let result):
+        self.viewModel.news.value = result.items.compactMap {
+          NewsTableViewCellViewModel(title: $0.title, description: $0.description, image: nil, publishDate: $0.publishDate)
+        }
+        break
+      }
+    }
   }
 }
 
