@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/swift,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,macos
 
+
+NewsBee/Resource/Network/APIConstants.swift
+
+
 ### macOS ###
 # General
 .DS_Store
@@ -9,7 +13,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
