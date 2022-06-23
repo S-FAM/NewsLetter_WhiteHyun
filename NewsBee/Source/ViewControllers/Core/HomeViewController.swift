@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
   
   
-  let categories: [String] = ["business", "entertainment", "health", "science", "sports", "technology"]
+  let categories: [String] = ["정치", "경제", "사회", "생활|문화", "세계", "IT|과학"]
   
   /// 상단에 보이는 뉴스비 아이콘 이미지입니다.
   private let iconImageView: UIImageView = {
@@ -60,8 +60,9 @@ class HomeViewController: UIViewController {
   /// 카테고리별 뉴스 뷰 컨트롤러를 갖고 있습니다.
   private lazy var dataViewControllers: [UIViewController] = {
     var vcs: [NewsViewController] = []
-    categories.forEach { _ in
+    categories.forEach {
       let vc = NewsViewController()
+      vc.category = $0
       vcs.append(vc)
     }
     return vcs
