@@ -9,6 +9,7 @@ import UIKit
 
 class NewsViewController: UIViewController {
   
+  var category: String = ""
   
   private lazy var newsTableView: UITableView = {
     let tableView = UITableView(frame: .zero, style: .plain)
@@ -57,7 +58,7 @@ class NewsViewController: UIViewController {
   
   private func fetchData() {
     
-    APICaller().getNaverNews(header: APINewsURI(query: "IT", display: 20, start: 1)) { results in
+    APICaller().getNaverNews(header: APINewsURI(query: category, display: 20, start: 1)) { results in
       
       switch results {
       case .failure(let error):
