@@ -30,6 +30,7 @@
 		BADCD7A828507745009E0CD0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A728507745009E0CD0 /* SettingsViewController.swift */; };
 		BADCD7AA28507799009E0CD0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCD7A928507799009E0CD0 /* AlertViewController.swift */; };
 		BAE326592864624E009F28F2 /* MyNewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE326582864624E009F28F2 /* MyNewsInfo.swift */; };
+		BAE3265B28646369009F28F2 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE3265A28646369009F28F2 /* SocketConnection.swift */; };
 		BAE77C50285474E9007330B0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE77C4F285474E9007330B0 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		BADCD7A728507745009E0CD0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BADCD7A928507799009E0CD0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BAE326582864624E009F28F2 /* MyNewsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewsInfo.swift; sourceTree = "<group>"; };
+		BAE3265A28646369009F28F2 /* SocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
 		BAE77C4F285474E9007330B0 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 			children = (
 				BAE77C4F285474E9007330B0 /* APIConstants.swift */,
 				BA949027285B0E1C00AC71EF /* APICaller.swift */,
+				BAE3265A28646369009F28F2 /* SocketConnection.swift */,
 				BA94902E285B257600AC71EF /* APINewsURI.swift */,
 				BA949029285B129100AC71EF /* APIError.swift */,
 			);
@@ -291,6 +294,7 @@
 				BA21343928505B3F00E3D332 /* NewsBee.xcdatamodeld in Sources */,
 				BA94902A285B129100AC71EF /* APIError.swift in Sources */,
 				BA54D3F0285F5B73001F068C /* NewsTableViewCellViewModel.swift in Sources */,
+				BAE3265B28646369009F28F2 /* SocketConnection.swift in Sources */,
 				BA94902D285B1D3600AC71EF /* Observable.swift in Sources */,
 				BA92985328536E4400DD9364 /* NewsViewController.swift in Sources */,
 				BA0BA8122855E174008DF038 /* NewsTableViewCell.swift in Sources */,
