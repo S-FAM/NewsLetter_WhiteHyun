@@ -10,13 +10,6 @@ import Foundation
 protocol SocketConnection {
   var port: Int { get }
   var hostAddress: String { get }
-  
-  func connect(
-    _ category: String,
-    startIndex: Int,
-    count: Int,
-    completion: (Result<[MyNewsInfo], Error>) -> Void
-  )
 }
 
 extension SocketConnection {
