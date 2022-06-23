@@ -26,7 +26,7 @@ struct ServerNewsHeader {
     category.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
   }
   
-  init(category: String, count: Int = 10, startIndex: Int = 1) {
+  init(category: String, count: Int = 20, startIndex: Int = 0) {
     self.category = category
     self.count = count
     self.startIndex = startIndex
