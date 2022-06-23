@@ -8,7 +8,7 @@
 import Foundation
 
 /// 네이버 뉴스 API를 가져올 때 사용합니다.
-struct APICaller {
+struct APICaller: SocketConnection {
   
   /// 뉴스를 가져옵니다.
   func getNaverNews(header: APINewsURI, completion: @escaping (Result<ResponseNews, APIError>) -> Void) {
@@ -45,5 +45,37 @@ struct APICaller {
     task.resume()
   }
   
-  
+  func serverNews(header: ServerNewsHeader, completion: @escaping (Result<[ServerNewsInfo], APIError>) -> Void) {
+    guard let percentString = header.percentQuery,
+          let url = URL(string: "http://\(hostAddress):\(port)/\(percentString)")
+    else {
+      completion(.failure(.responseError))
+      return
+    }
+    
+    var urlRequest = URLRequest(url: url)
+    urlRequest.addValue(String(header.startIndex), forHTTPHeaderField: "startIndex")
+    urlRequest.addValue(String(header.count), forHTTPHeaderField: "count")
+    
+    let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+      
+      guard let httpResponse = response as? HTTPURLResponse,
+            httpResponse.statusCode == 200,
+            let data = data
+      else {
+        completion(.failure(.responseError))
+        return
+      }
+      
+      do {
+        let results = try JSONDecoder().decode([ServerNewsInfo].self, from: data)
+        completion(.success(results))
+      
+      } catch {
+        completion(.failure(.decodingError))
+      }
+    }
+    
+    task.resume()
+  }
 }
