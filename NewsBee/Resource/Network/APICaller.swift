@@ -45,7 +45,7 @@ struct APICaller: SocketConnection {
     task.resume()
   }
   
-  func serverNews(header: ServerNewsHeader, completion: @escaping (Result<[MyNewsInfo], APIError>) -> Void) {
+  func serverNews(header: ServerNewsHeader, completion: @escaping (Result<[ServerNewsInfo], APIError>) -> Void) {
     guard let percentString = header.percentQuery,
           let url = URL(string: "http://\(hostAddress):\(port)/\(percentString)")
     else {
@@ -68,7 +68,7 @@ struct APICaller: SocketConnection {
       }
       
       do {
-        let results = try JSONDecoder().decode([MyNewsInfo].self, from: data)
+        let results = try JSONDecoder().decode([ServerNewsInfo].self, from: data)
         completion(.success(results))
       
       } catch {

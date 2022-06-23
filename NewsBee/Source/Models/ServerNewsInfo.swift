@@ -1,5 +1,5 @@
 //
-//  MyNewsInfo.swift
+//  ServerNewsInfo.swift
 //  NewsBee
 //
 //  Created by 홍승현 on 2022/06/23.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct MyNewsInfo: Codable {
+struct ServerNewsInfo: Codable {
   
   /// 뉴스 제목
   let title: String
